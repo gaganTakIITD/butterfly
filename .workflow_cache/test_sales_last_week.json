@@ -1,0 +1,10 @@
+[
+  {"id": "INV-001", "region": "North", "status": "Shipped", "quantity": 10, "amount": 1500.00},
+  {"id": "INV-002", "region": "South", "status": "Pending", "quantity": null, "amount": 800.00},
+  {"id": "INV-003", "region": "North", "status": "Shipped", "quantity": 5, "amount": 750.00},
+  {"id": "INV-004", "region": "East", "status": "Shipped", "quantity": 12, "amount": 2400.00},
+  {"id": "INV-005", "region": "South", "status": "Shipped", "quantity": 2, "amount": 300.00},
+  {"id": "INV-006", "region": "North", "status": "Cancelled", "quantity": 10, "amount": 1500.00},
+  {"id": "INV-007", "region": "West", "status": "Shipped", "quantity": 15, "amount": 3200.00},
+  {"id": "INV-008", "region": "East", "status": "Shipped", "quantity": 8, "amount": 1600.00}
+]

@@ -1,0 +1,37 @@
+services:
+  workflow_orchestrator:
+    build: .
+    container_name: workflow_orchestrator
+    environment:
+      # === AI Provider (OpenAI-compatible) ===
+      # Default: Groq (free tier) — get key at https://console.groq.com
+      - OPENAI_API_KEY=Insert your api key here
+      - OPENAI_BASE_URL=https://api.groq.com/openai/v1
+      - MODEL_NAME=llama-3.3-70b-versatile
+
+      # To switch to OpenAI, comment the above and uncomment:
+      # - OPENAI_API_KEY=sk-your-openai-key
+      # - MODEL_NAME=gpt-4o
+      # (remove OPENAI_BASE_URL to use default OpenAI endpoint)
+
+      - SIMULATE_FAILURES=false
+
+      # SMTP config for real email dispatch (optional)
+      - SMTP_HOST=smtp.gmail.com
+      - SMTP_PORT=587
+      - SMTP_USER=your mail id for smtp 
+      - SMTP_PASS=your smtp password
+    volumes:
+      - ./reports:/app/reports
+      - ./execution_log.json:/app/execution_log.json
+      - ./.workflow_cache:/app/.workflow_cache
+    stdin_open: true
+    ports:
+      - "5000"
+    tty: true
+    networks:
+      - agents-net
+
+networks:
+  agents-net:
+    external: true

@@ -1,0 +1,11 @@
+Execute the pipeline on 'test_sales' data from 'last_week'.
+
+Steps:
+1. Fetch the data from the local cache.
+2. Validate and clean it (handle null quantity).
+3. Filter out any 'Cancelled' shipments.
+4. Transform and summarize the data by 'region' aggregating the 'amount'.
+5. Generate a bar chart visualization for the regional amounts.
+6. Compose a detailed, professional HTML report.
+7. Export the report as a local HTML file, named 'final_report'.
+8. Email the exported report to tejashvikumawat@gmail.com.
