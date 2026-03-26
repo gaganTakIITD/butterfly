@@ -1,7 +1,7 @@
 services:
-  workflow_orchestrator:
+  agent:
     build: .
-    container_name: workflow_orchestrator
+    container_name: agent
     environment:
       # === AI Provider (OpenAI-compatible) ===
       # Default: Groq (free tier) — get key at https://console.groq.com
@@ -27,11 +27,5 @@ services:
       - ./.workflow_cache:/app/.workflow_cache
     stdin_open: true
     ports:
-      - "5000"
+      - "5000:5000"
     tty: true
-    networks:
-      - agents-net
-
-networks:
-  agents-net:
-    external: true
