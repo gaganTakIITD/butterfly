@@ -164,3 +164,6 @@ execution_log.json
 reports/
 src/reports/
 src/__pycache__/
+run_demo.py
+test_prompt.txt
+payload.json

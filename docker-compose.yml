@@ -5,7 +5,7 @@ services:
     environment:
       # === AI Provider (OpenAI-compatible) ===
       # Default: Groq (free tier) — get key at https://console.groq.com
-      - OPENAI_API_KEY=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
+      - OPENAI_API_KEY=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
       - OPENAI_BASE_URL=https://api.groq.com/openai/v1
       - MODEL_NAME=llama-3.3-70b-versatile
 
