@@ -5,7 +5,7 @@ services:
     environment:
       # === AI Provider (OpenAI-compatible) ===
       # Default: Groq (free tier) — get key at https://console.groq.com
-      - OPENAI_API_KEY=Insert your api key here
+      - OPENAI_API_KEY=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
       - OPENAI_BASE_URL=https://api.groq.com/openai/v1
       - MODEL_NAME=llama-3.3-70b-versatile
 
@@ -19,8 +19,8 @@ services:
       # SMTP config for real email dispatch (optional)
       - SMTP_HOST=smtp.gmail.com
       - SMTP_PORT=587
-      - SMTP_USER=your mail id for smtp 
-      - SMTP_PASS=your smtp password
+      - SMTP_USER=gagantak00@gmail.com
+      - SMTP_PASS=fmyg ibnk djlw wngk
     volumes:
       - ./reports:/app/reports
       - ./execution_log.json:/app/execution_log.json
